@@ -8,6 +8,10 @@ import About from './About'
 import ContactBanner from './ContactBanner'
 import Footer from './Footer'
 import MenuPage from './MenuPage'
+import CommunityPage from './CommunityPage'
+import ContactPage from './ContactPage'
+import AboutPage from './AboutPage'
+import OrderPage from './OrderPage'
 import './App.css'
 
 function Home() {
@@ -33,6 +37,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<MenuPage />} />
+        <Route path="/community" element={<CommunityPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/order" element={<OrderPage />} />
       </Routes>
     </BrowserRouter>
   )

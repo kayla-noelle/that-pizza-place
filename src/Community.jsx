@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Community() {
   return (
     <section className="community">
@@ -13,7 +15,7 @@ export default function Community() {
             That Pizza Place is a long standing supporter of the community.
             Whether team sports or special causes, we love to give back!
           </p>
-          <a href="#" className="community-btn">Learn More</a>
+          <Link to="/community" className="community-btn">Learn More</Link>
         </div>
       </div>
     </section>

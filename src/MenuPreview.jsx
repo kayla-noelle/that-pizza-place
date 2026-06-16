@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const menuItems = [
   { src: '/ThatPizzaPlace_24.png', alt: 'Pizza', label: 'Pizza' },
   { src: '/menu/ThatPizzaPlace_47.png', alt: 'Sandwiches', label: 'Sandwiches' },
@@ -19,7 +21,7 @@ export default function MenuPreview() {
           </div>
         ))}
       </div>
-      <a href="#" className="menu-preview-link">View our full menu</a>
+      <Link to="/menu" className="menu-preview-link">View our full menu</Link>
     </section>
   )
 }

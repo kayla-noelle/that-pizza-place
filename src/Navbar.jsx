@@ -23,10 +23,10 @@ export default function Navbar() {
 
       <ul className={`navbar-links${menuOpen ? ' open' : ''}`}>
         <li><Link to="/menu">Menu</Link></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#community">Community</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#order" className="navbar-cta">Order Now</a></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/community">Community</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/order" className="navbar-cta">Order Now</Link></li>
       </ul>
     </nav>
   )

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Hero() {
   return (
     <section className="hero">
@@ -16,8 +18,8 @@ export default function Hero() {
             A Carlsbad Tradition for over four decade
           </p>
           <div className="hero-buttons">
-            <a href="#" className="hero-btn hero-btn--pickup">Order Pickup</a>
-            <a href="#" className="hero-btn hero-btn--delivery">Order Delivery</a>
+            <a href="https://www.toasttab.com/local/order/that-pizza-place/r-32db71c1-64cd-4796-9676-06da90995f7d" className="hero-btn hero-btn--pickup">Order Pickup</a>
+            <Link to="/order" className="hero-btn hero-btn--delivery">Order Delivery</Link>
           </div>
         </div>
       </div>
