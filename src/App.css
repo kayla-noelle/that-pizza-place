@@ -58,6 +58,7 @@
 
 .footer-hours {
   align-self: flex-start;
+  padding-top: 52px;
 
   h3 {
     margin: 0 0 12px;
@@ -76,6 +77,38 @@
 
   p + p {
     margin-top: 4px;
+  }
+}
+
+.footer-follow {
+  align-self: flex-start;
+  padding-top: 52px;
+
+  h3 {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  p + p {
+    margin-top: 4px;
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

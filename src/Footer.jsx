@@ -22,6 +22,12 @@ export default function Footer() {
           <p>Sun-Thurs : 11am-8pm</p>
           <p>Fri-Sat: 11am-9pm</p>
         </div>
+
+        <div className="footer-follow">
+          <h3>Follow</h3>
+          <p><a href="https://www.facebook.com/ThatPizzaPlace" target="_blank" rel="noreferrer">Facebook</a></p>
+          <p><a href="https://www.instagram.com/thatpizzaplacecarlsbad/" target="_blank" rel="noreferrer">Instagram</a></p>
+        </div>
       </div>
     </footer>
   )

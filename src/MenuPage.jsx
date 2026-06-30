@@ -4,7 +4,7 @@ import Footer from './Footer'
 
 const categories = [
   {
-    src: null,
+    src: '/menu/ThatPizzaPlace_34.jpg',
     label: 'Specialty Pizza',
     description: 'Small 18.25 (Deep Dish 19.25)  ·  Medium 23.25  ·  Large 28.50 (Deep Dish 29.50)  ·  X-Large 38.35',
     items: [
@@ -46,7 +46,7 @@ const categories = [
     ],
   },
   {
-    src: null,
+    src: '/menu/ThatPizzaPlace_51.jpg',
     label: 'Calzones',
     description: '*GF not available',
     items: [
@@ -97,7 +97,7 @@ const categories = [
 
 const beverageCategories = [
   {
-    src: null,
+    src: '/menu/ThatPizzaPlace_49.jpg',
     label: 'Draft Beer',
     description: 'Available by the Pint and Pitcher',
     items: [
