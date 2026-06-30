@@ -5,7 +5,7 @@ const menuItems = [
   { src: '/menu/ThatPizzaPlace_47.png', alt: 'Sandwiches', label: 'Sandwiches' },
   { src: '/menu/ThatPizzaPlace_78.png', alt: 'Desserts', label: 'Desserts' },
   { src: '/menu/ThatPizzaPlace_62.png', alt: 'Appetizers', label: 'Appetizers' },
-  { src: null, label: 'Drinks' },
+  { src: '/menu/ThatPizzaPlace_49.jpg', alt: 'Drinks', label: 'Drinks', objectPosition: 'center 70%' },
   { src: '/menu/ThatPizzaPlace_16.png', alt: 'Salads', label: 'Salads' },
 ]
 
@@ -16,7 +16,7 @@ export default function MenuPreview() {
       <div className="menu-preview-grid">
         {menuItems.map((item, i) => (
           <div key={i} className="menu-preview-placeholder">
-            {item.src && <img src={item.src} alt={item.alt} />}
+            {item.src && <img src={item.src} alt={item.alt} style={item.objectPosition ? { objectPosition: item.objectPosition } : undefined} />}
             <span className="menu-preview-label">{item.label}</span>
           </div>
         ))}
