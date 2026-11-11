@@ -264,10 +264,12 @@ export default function MenuPage() {
         </p>
         <div className="menu-categories">
           {beverageCategories.map((cat, i) => (
-            <div key={i} className={`menu-category${i % 2 === 1 ? ' menu-category--reverse' : ''}`}>
-              <div className="menu-category-image">
-                {cat.src && <img src={cat.src} alt={cat.label} />}
-              </div>
+            <div key={i} className={`menu-category${cat.src ? (i % 2 === 1 ? ' menu-category--reverse' : '') : ' menu-category--centered'}`}>
+              {cat.src && (
+                <div className="menu-category-image">
+                  <img src={cat.src} alt={cat.label} />
+                </div>
+              )}
               <div className="menu-category-text">
                 <h2 className="menu-category-title">{cat.label}</h2>
                 {cat.description && <p className="menu-category-description">{cat.description}</p>}
