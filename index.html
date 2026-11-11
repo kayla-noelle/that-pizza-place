@@ -9,5 +9,20 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Static copies of the React forms below so Netlify's deploy-time bot can detect their fields. -->
+    <form name="contact" method="POST" netlify="true" hidden>
+      <input type="text" name="fullName" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="community-fundraising" method="POST" netlify="true" hidden>
+      <input type="text" name="fullName" />
+      <input type="text" name="organization" />
+      <input type="date" name="fundraisingDate" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>

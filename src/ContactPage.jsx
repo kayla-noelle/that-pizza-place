@@ -27,7 +27,8 @@ export default function ContactPage() {
           <br />
           Fri-Sat: 11am-10pm
         </p>
-        <form className="community-form">
+        <form className="community-form" name="contact" method="POST" netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
           <div className="community-form-group">
             <label htmlFor="fullName">Full Name</label>
             <input type="text" id="fullName" name="fullName" required />

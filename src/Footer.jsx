@@ -25,8 +25,8 @@ export default function Footer() {
 
         <div className="footer-follow">
           <h3>Follow</h3>
-          <p><a href="https://www.facebook.com/ThatPizzaPlace" target="_blank" rel="noreferrer">Facebook</a></p>
-          <p><a href="https://www.instagram.com/thatpizzaplacecarlsbad/" target="_blank" rel="noreferrer">Instagram</a></p>
+          <p><a href="https://www.facebook.com/ThatPizzaPlace" target="_blank" rel="noreferrer" aria-label="Facebook (opens in a new tab)">Facebook</a></p>
+          <p><a href="https://www.instagram.com/thatpizzaplacecarlsbad/" target="_blank" rel="noreferrer" aria-label="Instagram (opens in a new tab)">Instagram</a></p>
         </div>
       </div>
     </footer>

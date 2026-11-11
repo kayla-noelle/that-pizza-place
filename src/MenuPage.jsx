@@ -4,6 +4,7 @@ import Footer from './Footer'
 
 const categories = [
   {
+    id: 'pizza',
     src: '/menu/ThatPizzaPlace_34.jpg',
     label: 'Specialty Pizza',
     description: 'Small 18.25 (Deep Dish 19.25)  ·  Medium 23.25  ·  Large 28.50 (Deep Dish 29.50)  ·  X-Large 38.35',
@@ -33,6 +34,7 @@ const categories = [
     ],
   },
   {
+    id: 'sandwiches',
     src: '/menu/ThatPizzaPlace_47.png',
     label: 'Sandwiches',
     description: '*Can be Hot or Cold. Served with House Made Pickles and Chips (Salted, BBQ or Salt & Vinegar)',
@@ -58,6 +60,7 @@ const categories = [
     ],
   },
   {
+    id: 'appetizers',
     src: '/menu/ThatPizzaPlace_62.png',
     label: 'Appetizers',
     items: [
@@ -72,6 +75,7 @@ const categories = [
     ],
   },
   {
+    id: 'salads',
     src: '/menu/ThatPizzaPlace_16.png',
     label: 'Salads',
     description: 'Individual (1-2 people) 9.75  ·  Family Size (4-5 people) 24.75  ·  *Add Chicken Individual (+3) Family (+7)',
@@ -85,6 +89,7 @@ const categories = [
     ],
   },
   {
+    id: 'desserts',
     src: '/menu/ThatPizzaPlace_78.png',
     label: 'Desserts',
     items: [
@@ -217,7 +222,7 @@ export default function MenuPage() {
         </p>
         <div className="menu-categories">
           {categories.map((cat, i) => (
-            <div key={i} className={`menu-category${i % 2 === 1 ? ' menu-category--reverse' : ''}`}>
+            <div key={i} id={cat.id} className={`menu-category${i % 2 === 1 ? ' menu-category--reverse' : ''}`}>
               <div className="menu-category-image">
                 {cat.src && <img src={cat.src} alt={cat.label} />}
               </div>
@@ -252,7 +257,7 @@ export default function MenuPage() {
             </div>
           ))}
         </div>
-        <h2 className="menu-section-title">Beverages</h2>
+        <h2 id="drinks" className="menu-section-title">Beverages</h2>
         <p className="menu-page-intro">
           HAPPY HOUR MONDAY-FRIDAY 3PM-6PM. $2 OFF BEER AND WINE
           <br /><br />

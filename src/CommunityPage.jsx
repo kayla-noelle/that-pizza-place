@@ -20,7 +20,8 @@ export default function CommunityPage() {
           <br /><br />
           <strong>Please fill out the request below and we will see where we can help.</strong>
         </p>
-        <form className="community-form">
+        <form className="community-form" name="community-fundraising" method="POST" netlify="true">
+          <input type="hidden" name="form-name" value="community-fundraising" />
           <div className="community-form-group">
             <label htmlFor="fullName">Full Name</label>
             <input type="text" id="fullName" name="fullName" required />
