@@ -48,6 +48,7 @@ const categories = [
     ],
   },
   {
+    id: 'calzones',
     src: '/menu/ThatPizzaPlace_51.jpg',
     label: 'Calzones',
     description: '*GF not available',
@@ -195,6 +196,16 @@ const beverageCategories = [
   },
 ]
 
+const jumpLinks = [
+  { label: 'Pizza', href: '#pizza' },
+  { label: 'Sandwiches', href: '#sandwiches' },
+  { label: 'Calzones', href: '#calzones' },
+  { label: 'Appetizers', href: '#appetizers' },
+  { label: 'Salads', href: '#salads' },
+  { label: 'Desserts', href: '#desserts' },
+  { label: 'Drinks', href: '#drinks' },
+]
+
 export default function MenuPage() {
   return (
     <div className="app">
@@ -220,6 +231,11 @@ export default function MenuPage() {
           <br /><br />
           6” Pizza, Choice of Salad (Garden, Caesar, House), Fountain Drink
         </p>
+        <nav className="menu-jump-links">
+          {jumpLinks.map((link) => (
+            <a key={link.href} href={link.href} className="menu-jump-link">{link.label}</a>
+          ))}
+        </nav>
         <div className="menu-categories">
           {categories.map((cat, i) => (
             <div key={i} id={cat.id} className={`menu-category${i % 2 === 1 ? ' menu-category--reverse' : ''}`}>
