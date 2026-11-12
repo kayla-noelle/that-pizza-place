@@ -211,10 +211,6 @@
     overflow: visible;
   }
 
-  .navbar-brand img {
-    height: 88px;
-  }
-
   .footer {
     padding: 24px 20px;
   }
@@ -1193,12 +1189,12 @@ p.order-page-takeout-text {
 
 @media (max-width: 640px) {
   .menu-jump-links {
-    top: 112px;
+    top: 144px;
   }
 
   .menu-category,
   .menu-section-title {
-    scroll-margin-top: 182px;
+    scroll-margin-top: 214px;
   }
 }
 
