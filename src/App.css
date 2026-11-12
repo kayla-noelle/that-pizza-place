@@ -811,6 +811,13 @@
 
 p.order-page-takeout-text {
   color: #fff;
+
+  a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
 }
 
 .order-page-pickup-btn {
