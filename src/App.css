@@ -729,6 +729,21 @@
   scroll-margin-top: 96px;
 }
 
+.menu-beverages-banner {
+  background: rgb(30, 30, 30);
+  color: #fff;
+  padding: 48px 24px;
+
+  .menu-section-title {
+    margin-top: 0;
+    color: #fff;
+  }
+
+  .menu-page-intro {
+    color: #fff;
+  }
+}
+
 .about-page-content {
   display: flex;
   gap: 32px;

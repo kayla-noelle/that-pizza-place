@@ -273,16 +273,18 @@ export default function MenuPage() {
             </div>
           ))}
         </div>
-        <h2 id="drinks" className="menu-section-title">Beverages</h2>
-        <p className="menu-page-intro">
-          HAPPY HOUR MONDAY-FRIDAY 3PM-6PM. $2 OFF BEER AND WINE
-          <br /><br />
-          Enjoy our great selection of rotating draft beers, micro brews, hard seltzer, kombucha, ciders and wine!
-          <br /><br />
-          We also offer non-alcoholic options.
-          <br /><br />
-          No Outside Beverages Allowed
-        </p>
+        <div className="menu-beverages-banner">
+          <h2 id="drinks" className="menu-section-title">Beverages</h2>
+          <p className="menu-page-intro">
+            HAPPY HOUR MONDAY-FRIDAY 3PM-6PM. $2 OFF BEER AND WINE
+            <br /><br />
+            Enjoy our great selection of rotating draft beers, micro brews, hard seltzer, kombucha, ciders and wine!
+            <br /><br />
+            We also offer non-alcoholic options.
+            <br /><br />
+            No Outside Beverages Allowed
+          </p>
+        </div>
         <div className="menu-categories">
           {beverageCategories.map((cat, i) => (
             <div key={i} className={`menu-category${cat.src ? (i % 2 === 1 ? ' menu-category--reverse' : '') : ' menu-category--centered'}`}>
