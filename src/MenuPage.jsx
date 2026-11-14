@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import ParallaxBanner from './ParallaxBanner'
 
 const categories = [
   {
@@ -211,9 +212,11 @@ export default function MenuPage() {
     <div className="app">
       <Navbar />
       <main className="app-main">
-        <div className="menu-page-banner">
-          <h1 className="menu-page-banner-title">Our Menu</h1>
-        </div>
+        <ParallaxBanner
+          title="Our Menu"
+          image="/ThatPizzaPlace_52.webp"
+          className="menu-page-photo-banner"
+        />
         <div className="menu-page-order">
           <a href="https://www.toasttab.com/local/order/that-pizza-place/r-32db71c1-64cd-4796-9676-06da90995f7d" className="hero-btn hero-btn--pickup">Order Pickup</a>
           <Link to="/order" className="hero-btn hero-btn--delivery">Order Delivery</Link>

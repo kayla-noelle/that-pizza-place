@@ -1,14 +1,17 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
+import ParallaxBanner from './ParallaxBanner'
 
 export default function OrderPage() {
   return (
     <div className="app">
       <Navbar />
       <main className="app-main">
-        <div className="menu-page-banner">
-          <h1 className="menu-page-banner-title">Order Online</h1>
-        </div>
+        <ParallaxBanner
+          title="Order Online"
+          image="/ThatPizzaPlace_24.png"
+          className="order-page-banner"
+        />
         <div className="order-page-delivery">
           <div className="order-page-delivery-text">
             <h3 className="menu-section-subtitle order-page-delivery-title">Order Delivery</h3>

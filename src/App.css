@@ -471,6 +471,8 @@
 .hero-btn--delivery {
   background: #000;
   color: #fff;
+  /* Same 2px border as the outlined Pickup button so the pair is equal height */
+  border: 2px solid #000;
 }
 
 .community {
@@ -1569,9 +1571,10 @@ p.order-page-takeout-text {
     background-position: center 30%;
   }
 
-  /* Contact: enlarge so the crop shows lights/TVs instead of the crowd */
+  /* Contact: show the diners in the lower part of the photo */
   .contact-page-banner .parallax-banner-bg {
-    background-size: auto 600px;
+    background-size: auto 380px;
+    background-position: 30% 70%;
   }
 }
 
@@ -1676,4 +1679,90 @@ p.order-page-takeout-text {
 /* Keep the award years together so "& 2026" never wraps on its own */
 .award-years {
   white-space: nowrap;
+}
+
+/* Phones: keep the two order buttons side by side, equal width, in one row */
+@media (max-width: 640px) {
+  .hero-buttons,
+  .menu-page-order {
+    flex-wrap: nowrap;
+    gap: 12px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .hero-buttons .hero-btn,
+  .menu-page-order .hero-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 12px 10px;
+    font-size: 15px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+/* Menu page order buttons: colors swap on hover / keyboard focus */
+.menu-page-order .hero-btn {
+  transition: background-color 0.2s, color 0.2s;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.menu-page-order .hero-btn--pickup:hover,
+.menu-page-order .hero-btn--pickup:focus-visible {
+  background: #000;
+  color: #fff;
+}
+
+.menu-page-order .hero-btn--delivery:hover,
+.menu-page-order .hero-btn--delivery:focus-visible {
+  background: #fff;
+  color: #000;
+}
+
+/* Menu page banner: center the crop on the pizzas and food */
+.menu-page-photo-banner .parallax-banner-bg {
+  background-position: center 18%;
+}
+
+@media (max-width: 640px) {
+  .menu-page-photo-banner .parallax-banner-bg {
+    background-size: auto 420px;
+    background-position: center 40%;
+  }
+}
+
+/* Contact banner on desktop: shift the crop down to show the diners */
+@media (min-width: 641px) {
+  .contact-page-banner .parallax-banner-bg {
+    background-position: center 70%;
+  }
+}
+
+/* Order Online banner: center the crop on the pizza */
+.order-page-banner .parallax-banner-bg {
+  background-position: center 70%;
+}
+
+@media (max-width: 640px) {
+  .order-page-banner .parallax-banner-bg {
+    background-size: auto 420px;
+    background-position: center 65%;
+  }
 }
