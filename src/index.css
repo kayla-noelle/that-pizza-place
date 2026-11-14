@@ -1,1 +1,13 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "Hellorado";
+  src: url("/fonts/font.woff2") format("woff2"),
+       url("/fonts/font.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-hellorado: "Hellorado", sans-serif;
+}

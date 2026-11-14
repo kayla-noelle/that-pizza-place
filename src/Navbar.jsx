@@ -9,24 +9,37 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
+  // Escape closes the mobile menu
+  useEffect(() => {
+    if (!menuOpen) return
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setMenuOpen(false)
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [menuOpen])
+
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-brand">
-        <img src="/tpp-black.png" alt="That Pizza Place" />
+        <img src="/tpp-white.png" alt="That Pizza Place" />
       </Link>
 
+      {/* Three lines that turn into an X while the menu is open */}
       <button
+        type="button"
         className={`navbar-toggle${menuOpen ? ' is-open' : ''}`}
-        aria-label="Toggle menu"
+        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
         aria-expanded={menuOpen}
+        aria-controls="navbar-links"
         onClick={() => setMenuOpen((o) => !o)}
       >
-        <span />
-        <span />
-        <span />
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
       </button>
 
-      <ul className={`navbar-links${menuOpen ? ' open' : ''}`}>
+      <ul id="navbar-links" className={`navbar-links${menuOpen ? ' open' : ''}`}>
         <li><Link to="/menu" onClick={() => setMenuOpen(false)}>Menu</Link></li>
         <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
         <li><Link to="/community" onClick={() => setMenuOpen(false)}>Community</Link></li>

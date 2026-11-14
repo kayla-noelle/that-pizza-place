@@ -18,7 +18,7 @@ export default function Hero() {
             A Carlsbad Tradition for over four decade
           </p>
           <div className="hero-buttons">
-            <a href="https://www.toasttab.com/local/order/that-pizza-place/r-32db71c1-64cd-4796-9676-06da90995f7d" className="hero-btn hero-btn--pickup">Order Pickup</a>
+            <a href="https://www.toasttab.com/local/order/that-pizza-place/r-32db71c1-64cd-4796-9676-06da90995f7d" className="hero-btn btn-outline-light">Order Pickup</a>
             <Link to="/order" className="hero-btn hero-btn--delivery">Order Delivery</Link>
           </div>
         </div>

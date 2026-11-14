@@ -1,23 +1,37 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
+import ParallaxBanner from './ParallaxBanner'
 
 export default function CommunityPage() {
   return (
     <div className="app">
       <Navbar />
       <main className="app-main">
-        <div className="menu-page-banner">
-          <h1 className="menu-page-banner-title">Community</h1>
+        <ParallaxBanner
+          title="Community Involvement"
+          image="/carlsbadtown.webp"
+          className="community-page-banner"
+        />
+        <div className="community-page-columns">
+          <section>
+            <h3 className="menu-section-subtitle">SPONSORSHIPS AND IN-STORE FUNDRAISERS</h3>
+            <p className="menu-page-intro">
+              That Pizza Place is a long standing supporter of the community.
+              Whether team sports or special causes, we love to give back!
+            </p>
+          </section>
+          <section>
+            <h3 className="menu-section-subtitle">LARGE GROUP GATHERINGS</h3>
+            <p className="menu-page-intro">
+              That Pizza Place is the perfect spot for your next gathering! Whether a birthday party, sports banquet or large family outing, we are the place for you.
+            </p>
+          </section>
         </div>
-        <h3 className="menu-section-subtitle">SPONSORSHIPS AND IN-STORE FUNDRAISERS</h3>
+        <h3 className="menu-section-subtitle">Fundraising Expectations and Limitations:</h3>
         <p className="menu-page-intro">
-          That Pizza Place is a long standing supporter of the community.
-          Whether team sports or special causes, we love to give back!
+          Participating organizations must promote the fundraising event to their community (email, social media etc.). No other discounts, specials, or coupons will be honored in conjunction with fundraising transactions. Per California Law, the sale of alcoholic beverages cannot count towards your sales.
         </p>
-        <h3 className="menu-section-subtitle">LARGE GROUP GATHERINGS</h3>
-        <p className="menu-page-intro">
-          That Pizza Place is the perfect spot for your next gathering! Whether a birthday party, sports banquet or large family outing, we are the place for you.
-          <br /><br />
+        <p className="menu-page-intro community-form-intro">
           <strong>Please fill out the request below and we will see where we can help.</strong>
         </p>
         <form className="community-form" name="community-fundraising" method="POST" netlify="true">
@@ -44,10 +58,6 @@ export default function CommunityPage() {
           </div>
           <button type="submit" className="navbar-cta community-form-submit">Send</button>
         </form>
-        <h3 className="menu-section-subtitle">Fundraising Expectations and Limitations:</h3>
-        <p className="menu-page-intro">
-          Participating organizations must promote the fundraising event to their community (email, social media etc.). No other discounts, specials, or coupons will be honored in conjunction with fundraising transactions. Per California Law, the sale of alcoholic beverages cannot count towards your sales.
-        </p>
       </main>
       <Footer />
     </div>

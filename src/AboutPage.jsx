@@ -1,14 +1,17 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
+import ParallaxBanner from './ParallaxBanner'
 
 export default function AboutPage() {
   return (
     <div className="app">
       <Navbar />
       <main className="app-main">
-        <div className="menu-page-banner">
-          <h1 className="menu-page-banner-title">Our Story</h1>
-        </div>
+        <ParallaxBanner
+          title="Our Story"
+          image="/ThatPizzaPlace_89.webp"
+          className="about-page-banner"
+        />
         <div className="about-page-content">
           <div className="about-page-images">
             <img src="/about/unnamed.jpg" alt="That Pizza Place" />
@@ -63,7 +66,7 @@ export default function AboutPage() {
             <br />
             Bottom Row: Thadd MacNeal & Johnny Chavez
           </p>
-          <img src="/TPP-1978.JPEG" alt="That Pizza Place Owners" />
+          <img src="/TPP_Owners_v2.jpg" alt="That Pizza Place Owners" />
         </div>
       </main>
       <Footer />

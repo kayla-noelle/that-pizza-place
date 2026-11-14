@@ -2,9 +2,9 @@ export default function Award() {
   return (
     <section className="award">
       <div className="award-left">
-        <h2 className="award-title">Voted Best Pizza in North County 2025</h2>
+        <h2 className="award-title">Voted Best Pizza in North County <span className="award-years">2025 &amp; 2026</span></h2>
         <p className="award-subtitle">As seen in</p>
-        <img src="/img_logo.png" alt="Best of North County logo" className="award-logo" />
+        <img src="/images.jpg" alt="The Best of North County, The Coast News" className="award-logo" />
       </div>
       <div className="award-right">
         <img
