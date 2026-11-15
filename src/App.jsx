@@ -36,11 +36,11 @@ function Home() {
       <Navbar />
       <main className="app-main">
         <Hero />
+        <ContactBanner />
         <MenuPreview />
         <Community />
         <Award />
         <About />
-        <ContactBanner />
       </main>
       <Footer />
     </div>

@@ -11,7 +11,7 @@ export default function About() {
         <p className="about-text">
           Learn about the history of That Pizza Place and the team behind your favorite pizza!
         </p>
-        <Link to="/about" className="about-btn btn-outline-light" aria-label="Our Story: the history of That Pizza Place and its owners">
+        <Link to="/about" className="about-btn btn-outline-light btn-solid-light" aria-label="Our Story: the history of That Pizza Place and its owners">
           Our Story
         </Link>
       </div>

@@ -24,7 +24,7 @@ export default function Community() {
           </p>
           <Link
             to="/community"
-            className="community-btn btn-outline-light"
+            className="community-btn btn-outline-light btn-solid-light"
             aria-label="Learn more about our community involvement"
           >
             Learn More

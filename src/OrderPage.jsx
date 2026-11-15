@@ -33,7 +33,7 @@ export default function OrderPage() {
             <p className="menu-page-intro order-page-takeout-text">
               For carry out call <a href="tel:7604343171">760 434 3171</a> or order online for pick up
             </p>
-            <a href="https://www.toasttab.com/local/order/that-pizza-place/r-32db71c1-64cd-4796-9676-06da90995f7d" className="hero-btn order-page-pickup-btn btn-outline-light">Order Pickup</a>
+            <a href="https://www.toasttab.com/local/order/that-pizza-place/r-32db71c1-64cd-4796-9676-06da90995f7d" className="hero-btn order-page-pickup-btn btn-outline-light btn-solid-light">Order Pickup</a>
           </div>
         </div>
       </main>

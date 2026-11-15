@@ -11,15 +11,15 @@ export default function Hero() {
       <div className="hero-overlay">
         <div className="hero-content">
           <p className="hero-tagline">
-            Voted Best Pizza in the Best of North County
+            VOTED BEST OF NORTH COUNTY!
           </p>
-          <h1 className="hero-title">Welcome to That Pizza Place</h1>
+          <h1 className="hero-title">That Pizza Place</h1>
           <p className="hero-subtitle">
-            A Carlsbad Tradition for over four decade
+            A Carlsbad Tradition since 1978
           </p>
           <div className="hero-buttons">
-            <a href="https://www.toasttab.com/local/order/that-pizza-place/r-32db71c1-64cd-4796-9676-06da90995f7d" className="hero-btn btn-outline-light">Order Pickup</a>
-            <Link to="/order" className="hero-btn hero-btn--delivery">Order Delivery</Link>
+            <a href="https://www.toasttab.com/local/order/that-pizza-place/r-32db71c1-64cd-4796-9676-06da90995f7d" className="hero-btn hero-btn--dark">Order Pickup</a>
+            <Link to="/menu" className="hero-btn hero-btn--dark">View Menu</Link>
           </div>
         </div>
       </div>

@@ -218,7 +218,7 @@ export default function MenuPage() {
           className="menu-page-photo-banner"
         />
         <div className="menu-page-order">
-          <a href="https://www.toasttab.com/local/order/that-pizza-place/r-32db71c1-64cd-4796-9676-06da90995f7d" className="hero-btn hero-btn--pickup">Order Pickup</a>
+          <a href="https://www.toasttab.com/local/order/that-pizza-place/r-32db71c1-64cd-4796-9676-06da90995f7d" className="hero-btn hero-btn--delivery">Order Pickup</a>
           <Link to="/order" className="hero-btn hero-btn--delivery">Order Delivery</Link>
         </div>
         <p className="menu-page-intro">

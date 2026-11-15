@@ -57,7 +57,7 @@ export default function ContactPage() {
             <label htmlFor="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
-          <button type="submit" className="navbar-cta community-form-submit">Send</button>
+          <button type="submit" className="community-form-submit">Send</button>
         </form>
         <p className="menu-page-intro">
           No Reservations Accepted
