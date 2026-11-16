@@ -428,6 +428,24 @@
   flex-wrap: wrap;
 }
 
+/* Mobile: text sits higher in the photo, order buttons sit lower */
+@media (max-width: 768px) {
+  .hero-overlay {
+    align-items: stretch;
+    padding: 20px 24px 48px;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons {
+    margin-top: auto;
+  }
+}
+
 .hero-btn {
   display: inline-block;
   padding: 14px 32px;
@@ -665,9 +683,11 @@
     flex-direction: column;
   }
 
+  /* Mobile: photo sits below the About Us text */
   .about-left {
     height: 260px;
     flex: 0 0 260px;
+    order: 2;
   }
 
   .about-right {
