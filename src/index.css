@@ -9,5 +9,7 @@
 }
 
 @theme {
+  /* Oswald is the site-wide text font (Tailwind's base font for html/body) */
+  --font-sans: "Oswald", sans-serif;
   --font-hellorado: "Hellorado", sans-serif;
 }

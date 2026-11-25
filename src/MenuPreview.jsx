@@ -43,13 +43,18 @@ export default function MenuPreview() {
     }
   }
 
-  const onCardClick = (e, offset) => {
-    // A swipe or a click on a side card moves the carousel instead of navigating.
-    if (didSwipe.current || offset !== 0) {
-      e.preventDefault()
+  // A swipe, or a click anywhere on a side card, moves the carousel.
+  const onCardClick = (offset) => {
+    if (didSwipe.current) {
       didSwipe.current = false
-      if (offset !== 0) go(offset)
+      return
     }
+    if (offset !== 0) go(offset)
+  }
+
+  // The button only navigates on the center card, and not at the end of a swipe.
+  const onButtonClick = (e, offset) => {
+    if (didSwipe.current || offset !== 0) e.preventDefault()
   }
 
   return (
@@ -85,16 +90,12 @@ export default function MenuPreview() {
             const offset = relativeOffset(i, active, n)
             const visible = Math.abs(offset) <= 1
             return (
-              <Link
+              <div
                 key={item.label}
-                to={item.to}
                 className={`menu-carousel-card${offset === 0 ? ' is-active' : ''}`}
                 style={{ '--offset': offset }}
-                aria-label={offset === 0 ? `View ${item.label} menu` : `Show ${item.label}`}
-                aria-hidden={!visible}
-                tabIndex={visible ? 0 : -1}
-                draggable={false}
-                onClick={(e) => onCardClick(e, offset)}
+                aria-hidden={offset !== 0}
+                onClick={() => onCardClick(offset)}
                 data-visible={visible}
               >
                 <span className="menu-carousel-image">
@@ -105,8 +106,19 @@ export default function MenuPreview() {
                     style={item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
                   />
                 </span>
-                <span className="menu-preview-label">{item.label}</span>
-              </Link>
+                <div className="menu-preview-card-body">
+                  <span className="menu-preview-label">{item.label}</span>
+                  <Link
+                    to="/order"
+                    className="menu-preview-card-btn"
+                    tabIndex={offset === 0 ? 0 : -1}
+                    draggable={false}
+                    onClick={(e) => onButtonClick(e, offset)}
+                  >
+                    Order Now
+                  </Link>
+                </div>
+              </div>
             )
           })}
         </div>

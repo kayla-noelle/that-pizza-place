@@ -21,6 +21,7 @@ import MenuPreview from './MenuPreview'
 import Community from './Community'
 import Award from './Award'
 import About from './About'
+import ContactSection from './ContactSection'
 import ContactBanner from './ContactBanner'
 import Footer from './Footer'
 import MenuPage from './MenuPage'
@@ -41,6 +42,7 @@ function Home() {
         <Community />
         <Award />
         <About />
+        <ContactSection />
       </main>
       <Footer />
     </div>
